@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestUnit>
+    <SysCFG note="服务器配置">
+        <Server IP="127.0.0.1" PORT="10801" />
+    </SysCFG>
+
+    <DestUserID note="目标用户ID">
+        <item BizTypeID="YQ" UserID="1" note="用户ID" />
+    </DestUserID>
+
+    <BizUnit note="业务处理">
+        <Unit NODE="0" filename="" interval="0" time="2" type="loginout" />
+    </BizUnit>
+    </TestUnit>

@@ -1,0 +1,6 @@
+{
+  "usersInfo":[
+    {"UserID":"000100000001","Password":"111111","DestUserID":"00020000001","RunType":"Send","BizTypeID":"YQ" },
+    {"UserID":"000200000001","Password":"111111","DestUserID":"00010000001","RunType":"Send","BizTypeID":"YQ"}
+  ]
+}

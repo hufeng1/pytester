@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!--
+	===============VCS接口配置文件===============
+	************************************************************
+	BusiBinding:  绑定业务类型组
+	BusiFuncID:	  业务类型（大写）		
+	UserIDFile：  用户ID文件路径
+	HeartBeat：   心跳检测超时时间
+	FrontService：前置地址组，可以配置多个前置
+	              isDirAcs属性控制连接平台的模式：直连前置（Y），通过fens（N）
+	Service：     链接地址和端口。如果isDirAcs设置为Y（直连前置），则配置为一线通提供的前置服务地址和端口；如果isDirAcs设置为N（通过fens），则配置为fens的服务地址和端口。
+	FlowPath：    con流文件存储路径(VCSAPI自身使用)：不设置值时默认为当前路径
+	ContInfoFile: 对手方联系方式信息存储文件路径（包含文件名）
+	BackLogFile:  回报日志存储路径（不包含文件名），不设置值时默认为当前路径
+	              Switch属性可以控制API是否产生回报日志（ON-打开、OFF-关闭）。
+	************************************************************		 		
+-->
+<SysConfig>
+    <BusiBinding note="关联业务组">
+        <BusiFuncID note="结售汇">YQ</BusiFuncID>      
+    </BusiBinding>
+	<UserIDFile note="用户ID文件存放路径">UserID.xml</UserIDFile>
+	<ContInfoFile note="联系方式存放路径">VCSContactInfo.xml</ContInfoFile>
+	<BackLogFile note="送达回报日志文件存放路径" switch="OFF"></BackLogFile> 
+	<HeartBeat note="心跳检测超时时间">100</HeartBeat>
+	<FrontService note="一线通前置组" isDirAcs="Y">
+		<Service>tcp://172.31.112.106:52100</Service>
+	</FrontService>
+	<FlowPath note="API流文件存储路径"></FlowPath>
+</SysConfig>
